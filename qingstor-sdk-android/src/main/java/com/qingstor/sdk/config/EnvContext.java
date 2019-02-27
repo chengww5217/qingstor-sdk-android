@@ -17,15 +17,8 @@
 package com.qingstor.sdk.config;
 
 import com.qingstor.sdk.constants.QSConstant;
-import com.qingstor.sdk.exception.QSException;
 import com.qingstor.sdk.request.ParamValidate;
 import com.qingstor.sdk.utils.QSStringUtil;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.util.Map;
 
 public class EnvContext implements ParamValidate {
 

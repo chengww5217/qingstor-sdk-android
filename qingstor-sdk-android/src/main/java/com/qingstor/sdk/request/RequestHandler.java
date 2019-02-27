@@ -16,7 +16,7 @@
 
 package com.qingstor.sdk.request;
 
-import com.chengww.qingstor_sdk_android.AndroidUtils;
+import com.chengww.qingstor_sdk_android.QingstorHelper;
 import com.qingstor.sdk.annotation.ParamAnnotation;
 import com.qingstor.sdk.config.EnvContext;
 import com.qingstor.sdk.constants.QSConstant;
@@ -78,7 +78,7 @@ public class RequestHandler {
             final OutputModel out = QSParamInvokeUtil.getOutputModel(this.asyncCallback);
             QSOkHttpRequestClient.fillResponseCallbackModel(
                     QSConstant.REQUEST_ERROR_CODE, validate, out);
-            AndroidUtils.getInstance().runOnUiThread(new Runnable() {
+            QingstorHelper.getInstance().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     asyncCallback.onAPIResponse(out);
