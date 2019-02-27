@@ -43,6 +43,7 @@
 
 ##---------------End: proguard configuration for Gson  ----------
 
+##---------------Begin: proguard configuration for okhttp  ----------
 # JSR 305 annotations are for embedding nullability information.
 -dontwarn javax.annotation.**
 
@@ -54,6 +55,10 @@
 
 # OkHttp platform used only on JVM and when Conscrypt dependency is available.
 -dontwarn okhttp3.internal.platform.ConscryptPlatform
+##---------------End: proguard configuration for okhttp  ----------
 
+##---------------Begin: proguard configuration for qingstor-sdk-java  ----------
 -keep class com.qingstor.sdk.model.** { *; }
 -keep class com.qingstor.sdk.service.** { *; }
+-keep class com.chengww.qingstor_sdk_android.R$* { *;}
+##---------------End: proguard configuration for qingstor-sdk-java  ----------
