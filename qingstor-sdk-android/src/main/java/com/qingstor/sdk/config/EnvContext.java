@@ -20,7 +20,9 @@ import com.qingstor.sdk.constants.QSConstant;
 import com.qingstor.sdk.request.ParamValidate;
 import com.qingstor.sdk.utils.QSStringUtil;
 
-public class EnvContext implements ParamValidate {
+import java.io.Serializable;
+
+public class EnvContext implements ParamValidate, Serializable {
 
     public static String qingcloudStorHost = "qingstor.com";
     public static String default_protocal = "https";
