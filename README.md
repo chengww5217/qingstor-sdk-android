@@ -18,7 +18,7 @@ There are some differences between qingstor-sdk-android and qingstor-sdk-java:
 - Add Downloader and Uploader management for Android.
 - Add the method QingstorHelper#handleResponse() to handle the response of the callback.
 
-You can see documents containing the complete package structure here: [github pages](https://qingstor-sdk-android.chengww.com).
+You can see documents containing the complete package structure here: [github pages](https://chengww5217.github.io/qingstor-sdk-android/).
 
 
 ## Getting Started
@@ -104,7 +104,7 @@ bucket.getObjectAsync("objectName", null, new ResponseCallBack<Bucket.GetObjectO
     }
 });
 ```
-You should new a thread to get the object use a synchronous method or [use the Downloader/Uploader in the android SDK](./docs-md/download_uploader.md).
+You should new a thread to get the object use a synchronous method or [use the Downloader/Uploader in the android SDK](./docs-md/downloader_uploader.md).
 
 See the [demo](./demo/README.md) for more sample information.
 
