@@ -136,4 +136,4 @@ In this way, the whole task information is stored and restored.
 The above instructions on downloader use are all over.
 The use of Uploader is almost identical to that of Downloader.
 
-For more sample information, see [demo](../demo/README.md).
+For more sample information, see the [demo](../demo/README.md).
