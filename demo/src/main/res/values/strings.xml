@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Qingstor Android Demo</string>
+    <string name="list_buckets">List Buckets</string>
+    <string name="access_key">Access Key</string>
+    <string name="access_secret">Access Secret</string>
+    <string name="access_key_not_empty">Access key not empty</string>
+    <string name="access_secret_not_empty">Access secret not empty</string>
+    <string name="parameter_error">Parameter error</string>
+    <string name="no_bucket_exist">No Bucket Exist</string>
+    <string name="no_file_exits">No File Exits</string>
+    <string name="bucket_list">Bucket List</string>
+    <string name="zone">Zone</string>
+    <string name="bucket_name">Bucket Name</string>
+    <string name="zone_not_empty">Zone not empty</string>
+    <string name="bucket_name_not_empty">Bucket name not empty</string>
+    <string name="select_files">Select Files</string>
+    <string name="no_file_select_app">No file select application</string>
+    <string name="download_task_exist">Download task exist</string>
+    <string name="download_task_added">Download task added</string>
+    <string name="download_list">Download List</string>
+    <string name="waiting">Waiting</string>
+    <string name="paused">Paused</string>
+    <string name="finished">Finished</string>
+    <string name="no_download_task">No download task</string>
+    <string name="upload_list">Upload List</string>
+    <string name="object_key">Object Key</string>
+    <string name="object_key_not_empty">Object key not empty</string>
+    <string name="no_upload_task">No upload task</string>
+    <string name="permission_defined">Permission defined</string>
+    <string name="file_uncopied">Failed to obtain the file</string>
+    <string name="delete_successful">Delete successful</string>
+    <string name="sure_to_delete">Are you sure you want to delete it?</string>
+    <string name="upload_to">Upload to</string>
+    <string name="login">Login</string>
+    <string name="download_path">Download path:</string>
+</resources>

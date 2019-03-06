@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleProgressBar">
+        <attr name="defaultColor" format="color" />
+        <attr name="reachedColor" format="color" />
+        <attr name="defaultHeight" format="dimension" />
+        <attr name="reachedHeight" format="dimension" />
+        <attr name="radius" format="dimension" />
+    </declare-styleable>
+</resources>
