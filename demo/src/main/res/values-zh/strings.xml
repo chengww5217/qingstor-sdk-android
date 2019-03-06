@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Qingstor Android Demo</string>
+    <string name="list_buckets">查看 Bucket</string>
+    <string name="access_key">Access Key</string>
+    <string name="access_secret">Access Secret</string>
+    <string name="access_key_not_empty">Access key 不为空</string>
+    <string name="access_secret_not_empty">Access secret 不为空</string>
+    <string name="parameter_error">参数错误</string>
+    <string name="no_bucket_exist">未创建任何 Bucket</string>
+    <string name="no_file_exits">没有任何文件</string>
+    <string name="bucket_list">Bucket 列表</string>
+    <string name="zone">区域</string>
+    <string name="bucket_name">Bucket 名称</string>
+    <string name="zone_not_empty">区域不为空</string>
+    <string name="bucket_name_not_empty">Bucket 名称不为空</string>
+    <string name="select_files">选择文件</string>
+    <string name="no_file_select_app">未安装文件选择程序</string>
+    <string name="download_task_exist">下载任务已存在</string>
+    <string name="download_task_added">下载任务已添加</string>
+    <string name="download_list">下载列表</string>
+    <string name="waiting">等待中…</string>
+    <string name="paused">已暂停</string>
+    <string name="finished">已完成</string>
+    <string name="no_download_task">没有下载任务</string>
+    <string name="upload_list">上传列表</string>
+    <string name="object_key">文件名</string>
+    <string name="object_key_not_empty">文件名不为空</string>
+    <string name="no_upload_task">没有上传任务</string>
+    <string name="permission_defined">权限被拒绝</string>
+    <string name="file_uncopied">文件获取失败</string>
+    <string name="delete_successful">删除成功</string>
+    <string name="sure_to_delete">确定要删除该文件吗？</string>
+    <string name="upload_to">上传到</string>
+    <string name="login">登录</string>
+    <string name="download_path">下载路径:</string>
+</resources>

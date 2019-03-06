@@ -17,17 +17,12 @@
 package com.qingstor.sdk.config;
 
 import com.qingstor.sdk.constants.QSConstant;
-import com.qingstor.sdk.exception.QSException;
 import com.qingstor.sdk.request.ParamValidate;
 import com.qingstor.sdk.utils.QSStringUtil;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.util.Map;
+import java.io.Serializable;
 
-public class EnvContext implements ParamValidate {
+public class EnvContext implements ParamValidate, Serializable {
 
     public static String qingcloudStorHost = "qingstor.com";
     public static String default_protocal = "https";

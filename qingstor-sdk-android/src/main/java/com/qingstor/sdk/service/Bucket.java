@@ -29,6 +29,7 @@ import com.qingstor.sdk.service.Types.*;
 import com.qingstor.sdk.utils.QSSignatureUtil;
 import com.qingstor.sdk.utils.QSStringUtil;
 import java.io.File;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -47,10 +48,18 @@ import java.util.Map;
  *
  * Now you can use the object bucket to do the operations.
  */
-public class Bucket {
+public class Bucket implements Serializable {
     private String zone;
     private String bucketName;
     private EnvContext envContext;
+
+    public String getZone() {
+        return zone;
+    }
+
+    public String getBucketName() {
+        return bucketName;
+    }
 
     public Bucket(EnvContext envContext, String zone, String bucketName) {
         this.envContext = envContext;

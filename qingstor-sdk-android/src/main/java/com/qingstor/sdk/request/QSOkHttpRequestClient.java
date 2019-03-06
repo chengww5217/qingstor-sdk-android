@@ -16,7 +16,7 @@
 
 package com.qingstor.sdk.request;
 
-import com.chengww.qingstor_sdk_android.AndroidUtils;
+import com.chengww.qingstor_sdk_android.QingstorHelper;
 import com.qingstor.sdk.constants.QSConstant;
 import com.qingstor.sdk.exception.QSException;
 import com.qingstor.sdk.model.OutputModel;
@@ -205,7 +205,7 @@ public class QSOkHttpRequestClient {
                             if (callBack != null) {
                                 final OutputModel m = QSParamInvokeUtil.getOutputModel(callBack);
                                 fillResponseValue2Object(response, m);
-                                AndroidUtils.getInstance().runOnUiThread(new Runnable() {
+                                QingstorHelper.getInstance().runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
                                         callBack.onAPIResponse(m);
@@ -234,7 +234,7 @@ public class QSOkHttpRequestClient {
                     errorCode = QSConstant.REQUEST_ERROR_CANCELLED; // Cancelled by users.
                 final OutputModel m = QSParamInvokeUtil.getOutputModel(callBack);
                 fillResponseCallbackModel(errorCode, e.getMessage(), m);
-                AndroidUtils.getInstance().runOnUiThread(new Runnable() {
+                QingstorHelper.getInstance().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         callBack.onAPIResponse(m);

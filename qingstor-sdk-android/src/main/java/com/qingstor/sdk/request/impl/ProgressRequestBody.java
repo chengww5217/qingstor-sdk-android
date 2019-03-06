@@ -11,6 +11,7 @@
  */
 package com.qingstor.sdk.request.impl;
 
+import com.chengww.qingstor_sdk_android.QingstorHelper;
 import com.qingstor.sdk.request.BodyProgressListener;
 import com.qingstor.sdk.request.CancellationHandler;
 
@@ -50,7 +51,7 @@ public class ProgressRequestBody extends RequestBody {
 			// 计算总长度
 			Buffer buffer = new Buffer();
 			requestBody.writeTo(buffer);
-			long size = buffer.size();
+			final long size = buffer.size();
 			if (size == -1) {
 				return;
 			}
@@ -64,14 +65,26 @@ public class ProgressRequestBody extends RequestBody {
 				buffer.copyTo(bufferedSink.buffer(), writeSize, blockSize);
                 bufferedSink.flush();
 				writeSize += blockSize;
-				listener.onProgress(writeSize, size);
+				final long finalWriteSize = writeSize;
+				QingstorHelper.getInstance().runOnUiThread(new Runnable() {
+					@Override
+					public void run() {
+						listener.onProgress(finalWriteSize, size);
+					}
+				});
 			}
 
             if (cancellationHandler != null && cancellationHandler.isCancelled())
                 throw new CancellationHandler.CancellationException();
 			buffer.copyTo(bufferedSink.buffer(), writeSize, size - writeSize);
 			bufferedSink.flush();
-			listener.onProgress(writeSize, size);
+			final long finalWriteSize2 = writeSize;
+			QingstorHelper.getInstance().runOnUiThread(new Runnable() {
+				@Override
+				public void run() {
+					listener.onProgress(finalWriteSize2, size);
+				}
+			});
 			buffer.clear();
 		} else {
 			requestBody.writeTo(bufferedSink);

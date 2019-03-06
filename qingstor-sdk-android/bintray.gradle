@@ -3,7 +3,7 @@ apply plugin: 'com.jfrog.bintray'
 
 version = rootProject.ext.versionName
 
-def siteUrl = 'https://github.com/chengww5217/qingstor-sdk-android.git'
+def siteUrl = 'https://github.com/chengww5217/qingstor-sdk-android'
 def gitUrl = 'https://github.com/chengww5217/qingstor-sdk-android.git'
 group = "com.chengww"
 
@@ -64,7 +64,7 @@ javadoc {
 }
 
 artifacts {
-//    archives javadocJar
+    archives javadocJar
     archives sourcesJar
 }
 
@@ -84,7 +84,7 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "chengww"
-        name = "qingstor_sdk_android"
+        name = "qingstor-sdk-android"
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]

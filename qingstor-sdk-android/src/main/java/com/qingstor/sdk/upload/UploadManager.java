@@ -15,7 +15,7 @@
 // +-------------------------------------------------------------------------
 package com.qingstor.sdk.upload;
 
-import com.chengww.qingstor_sdk_android.AndroidUtils;
+import com.chengww.qingstor_sdk_android.QingstorHelper;
 import com.google.gson.Gson;
 import com.qingstor.sdk.annotation.ParamAnnotation;
 import com.qingstor.sdk.constants.QSConstant;
@@ -73,7 +73,7 @@ public class UploadManager {
         if (!file.exists() || file.isDirectory())
             throw new QSException("File does not exist or it is a directory.");
 
-        put(file, file.getName(), file.getName(), "");
+        put(file, file.getName(), null, "");
     }
 
     /**
@@ -136,7 +136,7 @@ public class UploadManager {
                     final OutputModel outputModel = new OutputModel();
                     outputModel.setStatueCode(code);
                     outputModel.setMessage(initOutput.getMessage());
-                    AndroidUtils.getInstance().runOnUiThread(new Runnable() {
+                    QingstorHelper.getInstance().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             callBack.onAPIResponse(objectKey, outputModel);
@@ -158,7 +158,7 @@ public class UploadManager {
                     final OutputModel outputModel = new OutputModel();
                     outputModel.setStatueCode(201);
                     outputModel.setMessage("This task has been uploaded.");
-                    AndroidUtils.getInstance().runOnUiThread(new Runnable() {
+                    QingstorHelper.getInstance().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             callBack.onAPIResponse(objectKey, outputModel);
@@ -204,7 +204,7 @@ public class UploadManager {
                         @Override
                         public void onProgress(long len, long size) {
                             final long bytesWritten = uploadModel.getCurrentPart() * partSize + len;
-                            AndroidUtils.getInstance().runOnUiThread(new Runnable() {
+                            QingstorHelper.getInstance().runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
                                     progressListener.onProgress(objectKey, bytesWritten, length);
@@ -228,7 +228,7 @@ public class UploadManager {
                     setData(objectKey, recorder);
                     // On upload failed
                     if (callBack != null) {
-                        AndroidUtils.getInstance().runOnUiThread(new Runnable() {
+                        QingstorHelper.getInstance().runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
                                 callBack.onAPIResponse(objectKey, send);
@@ -327,7 +327,7 @@ public class UploadManager {
 
         // Response callback.
         if (callBack != null) {
-            AndroidUtils.getInstance().runOnUiThread(new Runnable() {
+            QingstorHelper.getInstance().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     callBack.onAPIResponse(objectKey, send);
@@ -368,7 +368,7 @@ public class UploadManager {
             requestHandler.setProgressListener(new BodyProgressListener() {
                 @Override
                 public void onProgress(final long len, final long size) {
-                    AndroidUtils.getInstance().runOnUiThread(new Runnable() {
+                    QingstorHelper.getInstance().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             progressListener.onProgress(objectKey, len, size);
@@ -386,7 +386,7 @@ public class UploadManager {
 
         final OutputModel outputModel = requestHandler.send();
         if (callBack != null) {
-            AndroidUtils.getInstance().runOnUiThread(new Runnable() {
+            QingstorHelper.getInstance().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     callBack.onAPIResponse(objectKey, outputModel);
@@ -401,7 +401,7 @@ public class UploadManager {
 
         private Long contentLength;
 
-        @ParamAnnotation(paramType = "header", paramName = "Content-Length")
+        @ParamAnnotation(paramType = "header", paramName = "content-length")
         public Long getContentLength() {
             return contentLength;
         }

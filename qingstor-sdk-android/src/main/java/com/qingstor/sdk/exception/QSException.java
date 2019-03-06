@@ -16,7 +16,7 @@
 
 package com.qingstor.sdk.exception;
 
-public class QSException extends Exception {
+public class QSException extends RuntimeException {
 
     private static final long serialVersionUID = -5562309362764717920L;
 

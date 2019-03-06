@@ -16,12 +16,14 @@
 
 package com.qingstor.sdk.config;
 
+import java.io.Serializable;
+
 /**
  * Deprecated, use {@link EnvContext} instead. <br>
  * 已过时，请使用 {@link EnvContext}
  */
 @Deprecated
-public class EvnContext extends EnvContext {
+public class EvnContext extends EnvContext implements Serializable {
 
     public EvnContext(String accessKey, String accessSecret) {
         super(accessKey, accessSecret);
