@@ -1,1 +1,1 @@
-include ':qingstor-sdk-android'
+include ':qingstor-sdk-android', ':demo'
