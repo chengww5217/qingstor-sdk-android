@@ -4,7 +4,7 @@
 
 该项目仅为简单体验，并没有覆盖所有 API。点击下载 APK 体验：
 
-- [Github 分流](./release/demo-release.apk)
+- [Github 分流](./release/demo-release.apk?raw=true)
 - [中国下载地址](https://js-cdn.pek3b.qingstor.com/qingstor-sdk-android/demo-release.apk)
 
 主要使用了以下 API：

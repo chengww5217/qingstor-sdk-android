@@ -6,7 +6,7 @@ The project is a simple experience and does not cover all APIs.
 
 Click to download the APK file:
 
-- [Github download address](./release/demo-release.apk)
+- [Github download address](./release/demo-release.apk?raw=true)
 - [Download address for China](https://js-cdn.pek3b.qingstor.com/qingstor-sdk-android/demo-release.apk)
 
 The following APIs are mainly used:

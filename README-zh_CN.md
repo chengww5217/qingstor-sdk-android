@@ -18,7 +18,7 @@
 - 新增专为安卓设计的 Downloader 和 Uploader 管理器。
 - 新增方法 QingstorHelper#handleResponse() 来处理 callback 中的回应。
 
-您可以在这里看到包含完整包结构的 SDK 文档: [github pages](https://qingstor-sdk-android.chengww.com).
+您可以在这里看到包含完整包结构的 SDK 文档: [github pages](https://chengww5217.github.io/qingstor-sdk-android/).
 
 ## 开始使用
 
@@ -103,7 +103,7 @@ bucket.getObjectAsync("objectName", null, new ResponseCallBack<Bucket.GetObjectO
     }
 });
 ```
-你应该新建一个线程，使用同步的方法来获取。或者[使用安卓 SDK 中的 Downloader/Uploader](./docs-md/download_uploader-zh_CN.md)。
+你应该新建一个线程，使用同步的方法来获取。或者[使用安卓 SDK 中的 Downloader/Uploader](./docs-md/downloader_uploader-zh_CN.md)。
 
 查看更多示例信息，请参考 [demo](./demo/README-zh_CN.md)。
 
